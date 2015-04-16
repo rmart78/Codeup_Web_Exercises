@@ -1,0 +1,58 @@
+
+.header {
+	color: #FFCC00;
+}
+
+
+body {
+	background-color: yellow;
+}
+
+ul {
+	list-style: square;
+}
+
+ol {
+	list-style: lower-alpha;
+}
+
+body {
+	font-style: oblique;
+}
+
+p, li {
+	color: yellow;
+}
+
+table, td, tr {
+	border: 1px solid orange;
+}
+
+th {
+	color: #FFCC00;
+}
+
+td {
+	background-color: #336633;
+	color: orange;
+}
+
+a:link {
+	color: #33FF33;
+}
+
+a:visited {
+	color: orange;
+}
+
+a:hover {
+	color: white;
+}
+
+a:active {
+	color: blue;
+}
+
+body {
+	background: url(http://www.gameartguppy.com/wordpress/wp-content/uploads/2011/06/12_bg_green.png);
+}

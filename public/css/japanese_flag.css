@@ -1,0 +1,20 @@
+.master_container {
+	width: 500px;
+	height: 350px;
+	border: solid black;
+	border-width: thin;
+	position: relative;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	background: red;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	position: absolute;
+	top: 75px;
+	left: 150px;
+	background-color: #d60818;
+}

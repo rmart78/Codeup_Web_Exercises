@@ -1,0 +1,75 @@
+h1 {
+	font-variant: bold;
+	color: #6145a3;
+	text-decoration: underline;
+}
+
+.master_container {
+	width: 450px;
+	height: 500px;
+	box-sizing: border-box;
+}
+
+.box_container {
+	display: inline-block;
+	width: 97px;
+	height: 97px;
+	box-sizing: border-box;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.box {
+	width: 72px;
+	height: 72px;
+	box-sizing: border-box;
+	border: 1px solid black;
+	padding: 10px;
+	color: #fefefe;
+	font-weight: bold;
+	position: absolute;
+	left: 0px;
+	bottom: 0px
+}
+
+.arrow {
+	position: absolute;
+	top: -12px;
+	right: -14px;
+}
+
+.ribbon {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+}
+
+a:hover {
+	color: black;
+}
+
+#red {
+	background-color: #d84231;
+}
+
+#gold {
+	background-color: #eaae33;
+}
+
+#yellow {
+	background-color: #fcf632;
+}
+
+#green {
+	background-color: #578c05;
+}
+
+#blue {
+	background-color: #234afb;
+}
+
+#purple {
+	background-color: #df8bf0;
+}
+

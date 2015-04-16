@@ -1,0 +1,75 @@
+/*The area emcompassing the entire flag*/
+.master_container {
+  width: 600px;
+  height: 390px;
+  position: relative;
+  box-sizing: border-box;
+  border: solid black;
+  border-width: thin;
+}
+
+/*The area that would hold the stars on the flag*/
+.starbox {
+  width: 250px;
+  height: 210px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #022868;
+  box-sizing: border-box;
+}
+
+/*These are the stripes adjacent to the starbox*/
+.stripe_box {
+  width: 348px;
+  height: 30px;
+  position: absolute;
+  background-color: red;
+  box-sizing: border-box;
+}
+
+/*These are the stripes that sit below the star box*/
+.stripe_open {
+  width: 598px;
+  height: 30px;
+  position: absolute;
+  background-color: red;
+  box-sizing: border-box;
+}
+
+/*This the the start of the positioning for each red stripe*/
+#one {
+  top: 9px;
+  right: 214px;
+}
+
+#two {
+  top: 68px;
+  right: 214px;
+}
+
+#three {
+  top: 128px;
+  right: 214px}
+
+#four {
+  top: 188px;
+  right: 214px}
+
+#five {
+  top: 248px;
+  right: 214px;
+}
+
+#six {
+  top: 308px;
+  right: 214px;
+}
+
+#seven {
+  top: 367.5px;
+  right: 214px;
+}
+/*This is the end of the positioning for each red stripe*/
+
+
