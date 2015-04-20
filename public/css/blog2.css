@@ -68,7 +68,7 @@
 	box-sizing: border-box;
 	position: relative;
 	width: 90%;
-	height: 2000px;
+	height: 4000px;
 	margin: auto;
 	background-color: #fcdd24;
 	border-radius: 25px;
@@ -122,4 +122,9 @@
 h2 {
 	font-family: 'Pacifico', cursive;
 	color: #2772b2;
+}
+
+.blog_photo {
+	width: 150px;
+	height: auto;
 }
