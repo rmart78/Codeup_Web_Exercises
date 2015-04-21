@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 #navbar {
 	top: 0px;
 	width: 90%;
@@ -22,18 +30,17 @@
                0 20px 20px rgba(0,0,0,.15);
 }
 
-#navlist .navlist {
+#navbar .navlist {
 	display: inline-block;
-}
-
-#navlist {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .navlist {
 	margin-left: 10%;
+}
+
+ul {
+	position: relative;
+	top: -8px;
 }
 
 #title {
@@ -65,7 +72,6 @@
 }
 
 #main_container {
-	box-sizing: border-box;
 	position: relative;
 	width: 90%;
 	height: 4000px;
@@ -77,7 +83,6 @@
 }
 
 #main_left {
-	box-sizing: border-box;
 	position: absolute;
 	left: 0px;
 	width: 20%;
@@ -93,7 +98,6 @@
 }
 
 #main_right {
-	box-sizing: border-box;
 	position: absolute;
 	right: 0px;
 	width: 65%;
@@ -127,4 +131,26 @@ h2 {
 .blog_photo {
 	width: 150px;
 	height: auto;
+}
+
+#about_container {
+	position: relative;
+	top: 20px;
+	padding: 20px;
+	width: 90%;
+	height: 4000px;
+	text-align: center;
+	margin: auto;
+	background-color: #fcdd24;
+	border-radius: 25px;
+	border: solid #2772b2;
+	border-width: thick;
+	font-family: 'Raleway', sans-serif;
+}
+
+#dictator_photo {
+	width: 500px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
