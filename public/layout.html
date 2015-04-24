@@ -4,40 +4,49 @@
 	<title>Layouts</title>
 	<link rel="stylesheet" href="/css/normalize.css">
 	<link rel="stylesheet" href="/css/layout.css">
+	<style type="text/css">
+
+/*.row {
+	border: 1px solid blue;
+}
+
+.column {
+	border: 1px solid green;
+}*/
+
+	</style>
 </head>
 <body>
-	<!-- The aside is the left bar on the page -->
-	<aside id="sidebar"> 
-		<ul id="navlist">
-			<li><a href="www.google.com">Google</a></li>
-			<li><a href="www.Facebook.com">Apple</a></li>
-			<li><a href="www.Twitter.com">Twitter</a></li>
-		</ul>
-	</aside>
-	<!-- The following code applies to the top nav bar -->
-	<nav id="navbar">
-		<h1 id="navheader">I Am The NavBar...Bow Before Me!</h1>
-	</nav>
-	<!-- 	The code below applies to the content area that is below the nav bar, right of the left bar and above the footer -->
-	<main>
-		<img id="deathstar" src="/img/deathstar.jpg" alt="The Death Star">
-		<h1>The Death Star</h1>
-		<p>The Death Star is a fictional spacecraft and galactic superweapon appearing in the Star Wars science-fiction franchise created by George Lucas. It is capable of destroying an entire planet with its powerful superlaser.</p>
-	</main>
-	<!-- The footer sits at the bottom of the page -->
-	<footer>
-		<!-- The copyright makes up 40% on the left side of the footer -->
-		<div id="copyright">
-			<p>Copyright &copy; 2008 Apple Inc. All rights reserved.</p>
+	<div class="container">
+		<div class="row" id="navbar">I am the Navbar...Bow Before Me!</div>
+		<div class="row">
+			<div class="column one-sixth">
+				<div class="row">
+					<ul id="navlist">
+						<li><a href="www.google.com">Google</a></li>
+						<li><a href="www.Facebook.com">Apple</a></li>
+						<li><a href="www.Twitter.com">Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="column one-third"><img id="deathstar" src="/img/deathstar.jpg" alt="The Death Star"></img></div>
+			<div class="column one-half">
+				<div class="row" id="deathtitle">The Death Star</div>
+				<div class="row" id="deathbody">
+					<p class="row">The Death Star is a fictional spacecraft and galactic superweapon appearing in the Star Wars science-fiction franchise created by George Lucas. It is capable of destroying an entire planet with its powerful superlaser.</p>
+				</div>
+			</div>
 		</div>
-		<!-- The footlist makes up 60% on the right side of the footer -->
-		<div id="footlist">
-			<ul class="footlist2">
-				<li class="footlist2"><a href="http://www.starwars.com">StarWars.com</a></li>
-				<li class="footlist2"><a href="http://starwars.wikia.com/wiki/Main_Page">Wookieepedia</a></li>
-				<li class="footlist2"><a href="http://www.theforce.net">TheForce.Net</a></li>
-			</ul>
+		<div class="row">
+			<div class="column one-half" id="copyright">
+				<p>Copyright &copy; 2015 Raul Co. All rights reserved.</p>
+			</div>
+			<div class="column one-half">
+				<ul class="footlist2">
+					<li class="footlist2"><a href="http://www.starwars.com">StarWars.com</a></li>
+					<li class="footlist2"><a href="http://starwars.wikia.com/wiki/Main_Page">Wookieepedia</a></li>
+					<li class="footlist2"><a href="http://www.theforce.net">TheForce.Net</a></li>
+				</ul>
+			</div>
 		</div>
-	</footer>
-	</body>
-</html>
+	</div>
