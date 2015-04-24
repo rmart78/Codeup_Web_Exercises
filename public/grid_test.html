@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid_test</title>
+	<link rel="stylesheet" type="text/css" href="/css/grid_test.css">
+	<style type="text/css">
+
+.container {
+	border: 1px solid blue;
+}	
+
+.row {
+	border: 1px solid green;
+}
+
+.column {
+	border: 1px solid red;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="column one-half offset-one-fourth" id="navbar">I Am the All Powerful Navbar...Bow Before Me!!!</div>
+		</div>
+		<div class="row">
+			<div class="column one-sixth" id="navlist">
+				<ul>
+					<li><a href="www.google.com">Google</a></li>
+					<li><a href="www.Facebook.com">Apple</a></li>
+					<li><a href="www.Twitter.com">Twitter</a></li>
+				</ul>
+			</div>
+			<div class="column one-third"><img id="deathstar" src="/img/deathstar.jpg" alt="The Death Star"></div>
+			<div class="column one-half">
+				<h1>About the Death Star</h1>
+			</div>
+			<div class="column one-half">
+				<p>The Death Star is a fictional spacecraft and galactic superweapon appearing in the Star Wars science-fiction franchise created by George Lucas. It is capable of destroying an entire planet with its powerful superlaser.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-half" id="copyright">Copyright &copy; 2015 Raul Co. All Rights Reserved</div>
+			<div class="column one-half">
+				<ul class="footlist">
+					<li class="footlist"><a href="http://www.starwars.com">StarWars.com</a></li>
+					<li class="footlist"><a href="http://starwars.wikia.com/wiki/Main_Page">Wookieepedia</a></li>
+					<li class="footlist"><a href="http://www.theforce.net">TheForce.Net</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>

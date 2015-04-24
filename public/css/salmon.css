@@ -1,0 +1,15 @@
+/*this an element selector*/
+p {
+	color: salmon;
+}
+
+/*using a . applies to a class*/
+.cohort-name {
+	color: teal;
+	font-style: italic;
+}
+
+/*# applies to an id*/
+#username {
+	font-family: papyrus;
+}
