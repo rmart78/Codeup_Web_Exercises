@@ -18,30 +18,30 @@ var favorite = 'blue'; // TODO: change this to your favorite color from the list
 var message;
 
 if (color == 'red') {
-    message = console.log("Red is the color of Big Red.");
+    message = console.log("Red is the color of the Arizona Cardinals.");
 }
 
 else if (color == 'orange') {
-    message = console.log("Orange is the color of Orange Crush.");
+    message = console.log("Orange is the color of the Denver Broncos.");
 }
 
 else if (color == 'yellow') {
-    message = console.log("Yellow is the color of Mellow Yellow.");
+    message = console.log("Yellow is the color of the Green Bay Packers.");
 }
 
 else if (color == 'green') {
-    message = console.log("Green is the color of 7-Up.");
+    message = console.log("Green is the color of the New York Jets.");
 }
 
 else if (color == 'blue') {
-    message = console.log("Blue is the color of Big Blue.");
+    message = console.log("Blue is the color of Indianapolis Colts.");
 }
 
 else if (color == 'indigo') {
     message = console.log("I do not know anything by that color.");
 }
 
-else if (color == 'violet') {
+else {
     message = console.log("I do not know anything by that color.");
 }
 
