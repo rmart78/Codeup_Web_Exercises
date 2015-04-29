@@ -14,17 +14,19 @@
 // todo:
 // Create log statements that will print each of the names array elements individually.
 
-var names = ['Raul', 'Veronica', 'Alora', 'Jenna'];
+	var names = ['Raul', 'Veronica', 'Alora', 'Jenna'];
 
-console.log('There are ' + names.length + ' names in the array.');
+	for (var i = 0; i < names.length; i++) {
+	    console.log('The name at index ' + i + ' is: ' + names[i]);
+	} 
 
-console.log('The first name is: ' + names[0]);
+	names.forEach(function (element,index,array) { 
 
-console.log('The second name is: ' + names[1]);
+    console.log('The name at index ' + index + ' is: ' + element);
+	});
 
-console.log('The third name is: ' + names[2]);
 
-console.log('The fourth name is: ' + names[3]);
+
 
 	</script>
 </body>
