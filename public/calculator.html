@@ -11,7 +11,7 @@
 		}
 
 		.column {
-			border: 1px solid green;
+			border: 1px solid blue;
 		}
 
 	</style>
@@ -75,7 +75,7 @@
 		</div>
 		<div class="row">
 			<div class="column one-fourth">
-				<button id="btnClear" class="button">C</button>
+				<button id="btnPeriod" class="button">.</button>
 			</div>
 			<div class="column one-fourth">
 				<button id="btn0" class="button">0</button>
@@ -85,6 +85,17 @@
 			</div>
 			<div class="column one-fourth">
 				<button id="btnDivide" class="button">/</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-third" id="clearButton">
+				<button id="btnClear" class="button">C</button>
+			</div>
+			<div class="column one-third" id="negative">
+				<button id="btnNegative" class="button">+/-</button>
+			</div>
+			<div class="column one-third" id="percetage">
+				<button id="btnPercentage" class="button">%</button>
 			</div>
 		</div>
 	</div>
@@ -239,6 +250,34 @@
 		}
 
 		document.getElementById('btn0').addEventListener('click', input0, false);
+
+				function inputPeriod () {
+			if (document.getElementById('operator').value == "") {
+			numbersInput.push('.');
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('left_operand').value = numbersJoin;
+			} else {
+				numbersInput2.push('.');
+				var numberJoin2 = numbersInput2.join("");
+				document.getElementById('right_operand').value = numberJoin2
+			}
+		}
+
+		document.getElementById('btnPeriod').addEventListener('click', inputPeriod, false);
+
+				function inputNegative () {
+			if ((document.getElementById('left_operand').value != "") && (document.getElementById('right_operand').value == "")) {
+			numbersInput.unshift('-');
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('left_operand').value = numbersJoin;
+			} else {
+				numbersInput2.unshift('-');
+				var numberJoin2 = numbersInput2.join("");
+				document.getElementById('right_operand').value = numberJoin2
+			}
+		}
+
+		document.getElementById('btnNegative').addEventListener('click', inputNegative, false);
 
 
 		function inputAdd () {
