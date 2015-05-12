@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Maps API</title>
+	<style type="text/css">
+		#map-canvas {
+			width: 600px;
+			height: 600px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="map-canvas"></div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1j_--S8woYzCdkoUMEFiEf1aub-SzeXY"></script>
+
+	<script type="text/javascript">
+		 // Set our address to geocode
+		var address = '5638 W Hausman Rd, San Antonio, TX 78249';
+
+		// Init geocoder object
+		var geocoder = new google.maps.Geocoder();
+
+		// Geocode our address
+		geocoder.geocode( { 'address': address}, function(results, status) {
+		  // Check for a successful result
+		  if (status == google.maps.GeocoderStatus.OK) {
+		    // Set our map options
+		    var mapOptions = {
+		      // Set the zoom level
+		      zoom: 15,
+		      // This sets the center of the map at our location
+		      center: results[0].geometry.location
+		    }
+		    // Render the map
+		    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+		  } else {
+		    // Show an error message with the status if our request fails
+		    alert("Geocoding was not successful - STATUS: " + status);
+		  }
+
+		  	    // Create lat and long for our marker position
+	    var codeup = { lat: 29.572076, lng: -98.597539 };
+
+	    // Add the marker to our existing map
+	    var marker = new google.maps.Marker({
+	      position: codeup,
+	      map: map
+	    });
+
+	    var infowindow = new google.maps.InfoWindow({
+    	content: 'This is some great sushi, at a reasonable price!'
+		});
+
+		// Open the window using our map and marker
+		infowindow.open(map,marker);
+
+		});
+
+
+
+	</script>
+</body>
+</html>
