@@ -9,56 +9,98 @@
 			border: 1px solid black;
 		}
 	</style>
+	<link href='http://fonts.googleapis.com/css?family=Vast+Shadow' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<style type="text/css">
+	#image {
+		width: 200px;
+		height: auto;
+		margin-left: 20px;
+	}
+
+	#test_title {
+		text-align: center;
+		width: 300px;
+	}
+
+	#header {
+		background-color: black;
+		color: white;
+		font-family: 'Vast Shadow', cursive;
+		font-size: 150%;
+		margin-top: 30px;
+		margin-left: 15px;
+	}
+
+	#description {
+		font-family: 'Special Elite', cursive;
+		margin-left: 20px;
+		font-size: 150%;
+	}
+
+
+	</style>
+
 	<div id="map-canvas"></div>
+
+	<div id="test_title">
+		<div id="header">Sapporo</div>
+		<h1 id="description">Good sushi at a good price. Click image below for more info...</h1>
+		<div id="embed_video"><img id="image" src="http://images.askmen.com/sports/foodcourt_250/259_healthiest-and-unhealthiest-sushi_flash.jpg" alt="Sushi Tray">
+		</div>
+		<div>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1j_--S8woYzCdkoUMEFiEf1aub-SzeXY"></script>
 
 	<script type="text/javascript">
-		 // Set our address to geocode
+		 
 		var address = '5638 W Hausman Rd, San Antonio, TX 78249';
 
-		// Init geocoder object
+		
 		var geocoder = new google.maps.Geocoder();
 
-		// Geocode our address
+		
 		geocoder.geocode( { 'address': address}, function(results, status) {
-		  // Check for a successful result
+		  
 		  if (status == google.maps.GeocoderStatus.OK) {
 		    // Set our map options
 		    var mapOptions = {
-		      // Set the zoom level
-		      zoom: 15,
-		      // This sets the center of the map at our location
+		  
+		      zoom: 18,
+		      
 		      center: results[0].geometry.location
 		    }
-		    // Render the map
+		   
 		    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 		  } else {
-		    // Show an error message with the status if our request fails
+
 		    alert("Geocoding was not successful - STATUS: " + status);
 		  }
 
-		  	    // Create lat and long for our marker position
+
 	    var codeup = { lat: 29.572076, lng: -98.597539 };
 
-	    // Add the marker to our existing map
 	    var marker = new google.maps.Marker({
 	      position: codeup,
 	      map: map
 	    });
 
 	    var infowindow = new google.maps.InfoWindow({
-    	content: 'This is some great sushi, at a reasonable price!'
+    	content: test_title
+
 		});
 
-		// Open the window using our map and marker
 		infowindow.open(map,marker);
 
 		});
 
+		function playVid () {
+			document.getElementById('embed_video').innerHTML = '<iframe width="320" height="195" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>';
+		}
 
+		document.getElementById('image').addEventListener('click', playVid, false);
 
 	</script>
 </body>
