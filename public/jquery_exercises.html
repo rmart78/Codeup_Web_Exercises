@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Jquery Exercise</title>
+</head>
+<body>
+	<div id="main_container" class="codeup">
+		<h1 id="main_title">What are my favorite things?</h1>
+		<p id="body" class="codeup">I have a lot of favorite things. Here is a more detailed list of all of them.</p>
+		<ul id="thingsList">
+			<li class="codeup">Relaxing</li>
+			<li class="codeup">Hanging Out</li>
+			<li class="codeup">Chilling</li>
+			<li class="codeup">Doing Nothing</li>
+		</ul>
+	</div>
+	<script src="/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('li').css('font-size','20px');
+			$('h1, p, li').css('background-color','yellow');
+			var titleContent = $('h1').html();
+			alert(titleContent);
+		});
+	</script>
+</body>
+</html>
