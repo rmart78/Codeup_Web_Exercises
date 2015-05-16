@@ -17,10 +17,20 @@
 	<script src="/js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('li').css('font-size','20px');
-			$('h1, p, li').css('background-color','yellow');
-			var titleContent = $('h1').html();
-			alert(titleContent);
+			$('h1').click(function () {
+				$('h1').css('background-color','yellow');
+			});
+			$('p').dblclick(function() {
+                $('p').css('font-size','18px');
+            });
+              $('li').hover(
+        	function() {
+            $('li').css('color', 'red');
+        	},
+        	function() {
+            $('li').css('color', 'black');
+        	}
+    		);
 		});
 	</script>
 </body>
