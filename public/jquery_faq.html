@@ -59,7 +59,7 @@
 
             // this activates the FAQ faq when I click on the top header
             $('#national').click(function(event) {
-              $('.visible').toggleClass('invisible');
+              $('dd').toggle();
             });
             
             // this turns the first list item in each list bold
@@ -71,7 +71,7 @@
 
             // this turns each parent list invisible when you click one one of the list items
             $('li').click(function(event) {
-              $(this).parent().toggleClass('invisible');
+              $(this).parent().hide();
             });
 
     });
