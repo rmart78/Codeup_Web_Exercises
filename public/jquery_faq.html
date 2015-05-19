@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery faq</title>
+	<style type="text/css">
+	.invisible {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<h1 id="national">National Park FAQs</h1>
+	<dl>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Big!</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Green</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Local</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Accessible</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Cheap</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Fun</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Outdoors</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Wild</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">Airy</dd>
+  		<dt>National Parks Are...</dt>
+  		<dd class="visible invisible">National</dd>
+	</dl>
+  <h3>Carlsbad National Park</h3>
+    <ul>
+        <li>Woodsy</li>
+        <li>Green</li>
+        <li>Out of Texas</li>
+        <li>Worth Visiting</li>
+    </ul>
+  <h3>Yellowstone National Park</h3>
+    <ul>
+        <li>Woodsy</li>
+        <li>Green</li>
+        <li>Out of Texas</li>
+        <li>Worth Visiting</li>
+    </ul>
+  <h3>Yosemite National Park</h3>
+    <ul>
+        <li>Woodsy</li>
+        <li>Green</li>
+        <li>Out of Texas</li>
+        <li>Worth Visiting</li>
+    </ul>
+	<script src="/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+	   $('document').ready(function() {
+
+            // this activates the FAQ faq when I click on the top header
+            $('#national').click(function(event) {
+              $('.visible').toggleClass('invisible');
+            });
+            
+            // this turns the first list item in each list bold
+            $('ul').each(function(index) {
+              if (index >= 0) {
+              $(this).children().first().css('font-weight', 'bold');
+              }
+            });
+
+            // this turns each parent list invisible when you click one one of the list items
+            $('li').click(function(event) {
+              $(this).parent().toggleClass('invisible');
+            });
+
+    });
+	</script>
+</body>
+</html>
