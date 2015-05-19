@@ -32,22 +32,22 @@
   		<dt>National Parks Are...</dt>
   		<dd class="visible invisible">National</dd>
 	</dl>
-  <h3>Carlsbad National Park</h3>
-    <ul>
+  <h3 class="park">Carlsbad National Park</h3>
+    <ul id="list1">
         <li>Woodsy</li>
         <li>Green</li>
         <li>Out of Texas</li>
         <li>Worth Visiting</li>
     </ul>
-  <h3>Yellowstone National Park</h3>
-    <ul>
+  <h3 class="park2">Yellowstone National Park</h3>
+    <ul id="list2">
         <li>Woodsy</li>
         <li>Green</li>
         <li>Out of Texas</li>
         <li>Worth Visiting</li>
     </ul>
-  <h3>Yosemite National Park</h3>
-    <ul>
+  <h3 class="park3">Yosemite National Park</h3>
+    <ul id="list3">
         <li>Woodsy</li>
         <li>Green</li>
         <li>Out of Texas</li>
@@ -59,19 +59,21 @@
 
             // this activates the FAQ faq when I click on the top header
             $('#national').click(function(event) {
-              $('dd').toggle();
+              $('dd').fadeToggle();
             });
             
-            // this turns the first list item in each list bold
-            $('ul').each(function(index) {
-              if (index >= 0) {
-              $(this).children().first().css('font-weight', 'bold');
-              }
+
+
+     $('.park').click(function() {
+                $('#list1').fadeToggle();
             });
 
-            // this turns each parent list invisible when you click one one of the list items
-            $('li').click(function(event) {
-              $(this).parent().hide();
+     $('.park2').click(function() {
+                $('#list2').fadeToggle();
+            });
+
+     $('.park3').click(function() {
+                $('#list3').fadeToggle();
             });
 
     });
