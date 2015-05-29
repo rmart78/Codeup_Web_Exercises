@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/calculator.css">
+
+	<style type="text/css">
+		.row {
+			border: 1px solid blue;
+		}
+
+		.column {
+			border: 1px solid blue;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="column five-twelth">
+				<input id="left_operand" name="left_operand" type="text">
+			</div>
+			<div class="column one-sixth">
+				<input id="operator" name="operator" type="text">
+			</div>
+			<div class="column five-twelth">
+				<input id="right_operand" name="right_operand" type="text">
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btn1" class="numberButton">1</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn2" class="numberButton">2</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn3" class="numberButton">3</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnAdd" class="button">+</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btn4" class="numberButton">4</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn5" class="numberButton">5</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn6" class="numberButton">6</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnSubtract" class="button">-</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btn7" class="numberButton">7</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn8" class="numberButton">8</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn9" class="numberButton">9</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnMultiply" class="button">*</button>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btnPeriod" class="button">.</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn0" class="numberButton">0</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnEqual" class="button">=</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnDivide" class="button">/</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-third" id="clearButton">
+				<button id="btnClear" class="button">C</button>
+			</div>
+			<div class="column one-third" id="negative">
+				<button id="btnNegative" class="button">+/-</button>
+			</div>
+			<div class="column one-third" id="percetage">
+				<button id="btnPercentage" class="button">%</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var leftWindow = document.getElementById('left_operand').value;
+
+		var operatorWindow = document.getElementById('operator').value;
+
+		var rightWindow = document.getElementById('right_operand').value;
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/calculator.css">
+
+	<style type="text/css">
+		.row {
+			border: 1px solid blue;
+		}
+
+		.column {
+			border: 1px solid blue;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="column five-sixth offset-one-twelth">
+				<input id="output" name="output" type="text">
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btn1" class="button">1</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn2" class="button">2</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn3" class="button">3</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnAdd" class="button">+</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btn4" class="button">4</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn5" class="button">5</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn6" class="button">6</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnSubtract" class="button">-</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btn7" class="button">7</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn8" class="button">8</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn9" class="button">9</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnMultiply" class="button">*</button>
+		</div>
+		<div class="row">
+			<div class="column one-fourth">
+				<button id="btnPeriod" class="button">.</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btn0" class="button">0</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnEqual" class="button">=</button>
+			</div>
+			<div class="column one-fourth">
+				<button id="btnDivide" class="button">/</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column one-third" id="clearButton">
+				<button id="btnClear" class="button">C</button>
+			</div>
+			<div class="column one-third" id="negative">
+				<button id="btnNegative" class="button">+/-</button>
+			</div>
+			<div class="column one-third" id="percetage">
+				<button id="btnPercentage" class="button">%</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var numbersInput = [];
+
+		var numbersInput2 = [];
+
+		// document.getElementById('left_operand').value = numbersInput;
+
+		// var currentValue = document.getElementById('left_operand').value;
+
+
+		function input1 () {
+			numbersInput.push(1);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn1').addEventListener('click', input1, false);
+
+		function input2 () {
+			numbersInput.push(2);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn2').addEventListener('click', input2, false);
+
+		function input3 () {
+			numbersInput.push(3);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn3').addEventListener('click', input3, false);
+
+		function input4 () {
+			numbersInput.push(4);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn4').addEventListener('click', input4, false);
+
+		function input5 () {
+			numbersInput.push(5);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn5').addEventListener('click', input5, false);
+
+		function input6 () {
+			numbersInput.push(6);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn6').addEventListener('click', input6, false);
+
+		function input7 () {
+			numbersInput.push(7);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn7').addEventListener('click', input7, false);
+
+		function input8 () {
+			numbersInput.push(8);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn8').addEventListener('click', input8, false);
+
+		function input9 () {
+			numbersInput.push(9);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn9').addEventListener('click', input9, false);
+
+		function input0 () {
+			numbersInput.push(0);
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btn0').addEventListener('click', input0, false);
+
+
+		function add () {
+			numbersInput.push('+');
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btnAdd').addEventListener('click', add, false);
+
+		function subtract () {
+			numbersInput.push('-');
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btnSubtract').addEventListener('click', subtract, false);
+
+		function multiple () {
+			numbersInput.push('*');
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btnMultiply').addEventListener('click', multiple, false);
+
+		function quotient () {
+			numbersInput.push('/');
+			var numbersJoin = numbersInput.join("");
+			document.getElementById('output').value = numbersJoin;
+		}
+
+		document.getElementById('btnDivide').addEventListener('click', quotient, false);
+
+		function equal () {
+			var firstOperator = numbersJoin.indexof("")
+			if (number)
+		}
+
+		document.getElementById('btnEqual').addEventListener('click', equal, false);
+
+		function refresh () {
+			window.location.reload();
+		}
+
+		document.getElementById('btnClear').addEventListener('click', refresh, false);
+
+
+	</script>
+
+</body>
+</html>

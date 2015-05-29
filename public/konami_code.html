@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+    <div>
+        <input id="input" name="input" type="text">
+    </div>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script>
+        var konami = [38,38,40,40,37,39,37,39,66,65];
+        var entered = [];
+
+        $('document').ready(function() {
+            $('#input').keydown(function() {
+                entered.push(event.keyCode);
+                console.log(event.keyCode);
+            });
+            
+            function keyCheck () {
+            if ((konami.length == entered.length) && (konami.value == entered.value)) {
+                alert('done');}
+            if ((konami.length == entered.length) && (konami.value != entered.value)) {
+                alert('not done. try again');
+            }}
+
+            $('#input').keyup(function() {
+                 keyCheck();
+            });
+
+
+            });
+
+
+
+
+    </script>
+
+</body>
+</html>

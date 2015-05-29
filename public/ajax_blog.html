@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>AJAX Blog</title>
+	<style type="text/css">
+	html {
+		text-align: center;
+	}
+	</style>
+
+</head>
+<body>
+	
+	<div id="posts">
+		<h1></h1>
+		<p></p>
+		<h2></h2>
+		<h3></h3>
+		<h1></h1>
+		<p></p>
+		<h2></h2>
+		<h3></h3>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$.ajax("/data/blog.json").done(function(data) {
+    alert("AJAX call completed successfully!");
+    console.log("Data returned from server:");
+    console.log(data);
+
+var htmlString = '';
+
+    $.each(data, function(index,object) {
+        htmlString += '<h1>' + object.title + '</h1>';
+        htmlString += '<p>' + object.content + '</p>';
+        htmlString += '<h2>' + 'Category: ' + object.categories + '</h2>';
+        htmlString += '<h3>' + 'Date: ' + object.date + '</h3>';
+    });
+
+
+
+    $('#posts').html(htmlString);
+    console.log(htmlString);
+
+});
+
+</script>
+
+</body>
+</html>
