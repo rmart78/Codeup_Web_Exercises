@@ -4,9 +4,9 @@
 
 	<title>AJAX Blog</title>
 	<style type="text/css">
-	html {
+		html {
 		text-align: center;
-	}
+		}
 	</style>
 
 </head>
@@ -27,26 +27,25 @@
 
 <script type="text/javascript">
 
-$.ajax("/data/blog.json").done(function(data) {
-    alert("AJAX call completed successfully!");
-    console.log("Data returned from server:");
-    console.log(data);
+	$.ajax("/data/blog.json").done(function(data) {
+    	alert("AJAX call completed successfully!");
+    	console.log("Data returned from server:");
+    	console.log(data);
 
-var htmlString = '';
+		var htmlString = '';
 
-    $.each(data, function(index,object) {
-        htmlString += '<h1>' + object.title + '</h1>';
-        htmlString += '<p>' + object.content + '</p>';
-        htmlString += '<h2>' + 'Category: ' + object.categories + '</h2>';
-        htmlString += '<h3>' + 'Date: ' + object.date + '</h3>';
-    });
+    	$.each(data, function(index,object) {
+        	htmlString += '<h1>' + object.title + '</h1>';
+        	htmlString += '<p>' + object.content + '</p>';
+        	htmlString += '<h2>' + 'Category: ' + object.categories + '</h2>';
+        	htmlString += '<h3>' + 'Date: ' + object.date + '</h3>';
+    	});
 
 
 
-    $('#posts').html(htmlString);
-    console.log(htmlString);
+    	$('#posts').html(htmlString);
 
-});
+	});
 
 </script>
 

@@ -64,58 +64,57 @@
 
     // TODO: Create an ajax GET request for /data/inventory.json
     $.ajax("/data/inventory.json").done(function(data) {
-    alert("AJAX call completed successfully!");
-    console.log("Data returned from server:");
-    console.log(data);
 
-    var htmlString = '';
+        var htmlString = '';
 
-    $.each(data, function(index,object) {
-        htmlString += '<tr>';
-        htmlString += '<td>' + object.title + '</td>';
-        htmlString += '<td>' + object.quantity + '</td>';
-        htmlString += '<td>' + object.categories + '</td>';
-        htmlString += '<td>' + object.price + '</td>';
-        htmlString += '</tr>';
-    });
+        $.each(data, function(index,object) {
+            htmlString += '<tr>';
+            htmlString += '<td>' + object.title + '</td>';
+            htmlString += '<td>' + object.quantity + '</td>';
+            htmlString += '<td>' + object.categories + '</td>';
+            htmlString += '<td>' + object.price + '</td>';
+            htmlString += '</tr>';
+        });
 
 
 
-    $('#insertProducts').html(htmlString);
-    console.log(htmlString);
+        $('#insertProducts').html(htmlString);
+        console.log(htmlString);
 
       
 
-});
+    });
 
     function refresh () {
         $.ajax("/data/inventory.json").done(function(data) {
  
 
-    var htmlString = '';
+            var htmlString = '';
 
-    $.each(data, function(index,object) {
-        htmlString += '<tr>';
-        htmlString += '<td>' + object.title + '</td>';
-        htmlString += '<td>' + object.quantity + '</td>';
-        htmlString += '<td>' + object.categories + '</td>';
-        htmlString += '<td>' + object.price + '</td>';
-        htmlString += '</tr>';
-    });
+            $.each(data, function(index,object) {
+                htmlString += '<tr>';
+                htmlString += '<td>' + object.title + '</td>';
+                htmlString += '<td>' + object.quantity + '</td>';
+                htmlString += '<td>' + object.categories + '</td>';
+                htmlString += '<td>' + object.price + '</td>';
+                htmlString += '</tr>';
+            });
 
       
 
-});
+        });
     }
 
 
-$('#refresh').click(function(){
+    $('#refresh').click(function(){
                 refresh();
-        });
+    });
+
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+    
 })();
 </script>
 
