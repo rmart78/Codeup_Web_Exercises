@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>AJAX Homework</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+
+		#title {
+			font-family: 'Lobster', cursive;
+		}
+
+		.font {
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	
+	<div id="info"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		$.ajax("http://scrappr.io/icemancast/api/contacts").done(function(data) {
+
+			var htmlString = '';
+
+	    	$.each(data, function(index,object) {
+	        	htmlString += '<h1 id="title"><i class="fa fa-user"></i>' + '  ' + object.name + '</h1>';
+	        	htmlString += '<h2>' + '================================' + '</h2>';
+	        	htmlString += '<div class="font"><i class="fa fa-phone"></i>' + '  ' + object.phone + '</div>';
+	        	htmlString += '<div class="font"><i class="fa fa-map-marker"></i>' + '  ' + object.address + '</div>';
+	        	htmlString += '<div class="font">' + object.city + ', ' + object.state + ' ' + object.zip + '</div><br>';
+	    	});
+
+
+
+	    	$('#info').html(htmlString);
+
+		});
+
+</script>
+
+</body>
+</html>
