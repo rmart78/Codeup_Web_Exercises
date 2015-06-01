@@ -28,9 +28,8 @@
 		<div class="row">
 			<div class="column one-third">
 				<div class="row">
-					<div id="weatherMax1" class="weatherMax column five-twelth">Weather Max</div>
-					<div class="column one-sixth">/</div>
-					<div id="weatherMin1" class="weatherMin column five-twelth">Weather Min</div>
+					<div class="temp column five-sixth offset-one-twelth">Weather Max</div>
+					
 				</div>
 				<div class="row">
 					<div class="column five-sixth offset-one-twelth"><img class="icon"  src="" alt="weather_conditions"></div>
@@ -50,9 +49,8 @@
 			</div>
 			<div class="column one-third">
 				<div class="row">
-					<div id="weatherMax2" class="weatherMax column five-twelth">Weather Max</div>
-					<div class="column one-sixth">/</div>
-					<div id="weatherMin2" class="weatherMin column five-twelth">Weather Min</div>
+					<div class="temp column five-sixth offset-one-twelth">Weather Max</div>
+					
 				</div>
 				<div class="row">
 					<div class="column five-sixth offset-one-twelth"><img class="icon" src="" alt="weather_conditions"></div>
@@ -72,9 +70,8 @@
 				</div>
 			<div class="column one-third">
 				<div class="row">
-					<div id="weatherMax3" class="weatherMax column five-twelth">Weather Max</div>
-					<div class="column one-sixth">/</div>
-					<div id="weatherMin3" class="weatherMin column five-twelth">Weather Min</div>
+					<div class="temp column five-sixth offset-one-twelth">Weather Max</div>
+					
 				</div>
 				<div class="row">
 					<div class="column five-sixth offset-one-twelth"><img class="icon" src="" alt="weather_conditions"></div>
@@ -110,19 +107,14 @@
     		
     		console.log(data);
     		console.log(data.list[0].deg);
-	     	var counter1 = 0;
 	     	var counter2 = 0;
 	     	var counter3 = 0;
 	     	var counter4 = 0;
 	     	var counter5 = 0;
 	     	var counter6 = 0;
 	     	var counter7 = 0;
-	     	$('.weatherMin').each(function() {
-        		$(this).html(data.list[counter1].temp.min);
-        		counter1 ++;
-        	});
-        	$('.weatherMax').each(function() {
-        		$(this).html(data.list[counter2].temp.max);
+        	$('.temp').each(function() {
+    			$(this).html(data.list[counter2].temp.max + '°' + '/' + ' ' + data.list[counter2].temp.min + '°');
         		counter2 ++;
         	});
         	$('.conditions').each(function() {
