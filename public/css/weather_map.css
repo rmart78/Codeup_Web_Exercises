@@ -140,5 +140,10 @@ html {
     background-color: #fff;
 }
 
+#form_container, #get_weather {
+    text-align: center;
+    margin-top: 10px;
+}
+
 
 
