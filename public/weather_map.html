@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/weather_map.css">
 
 	<style type="text/css">
-	.container {
+/*	.container {
 		border: solid black 1px;
 	}
 	.row {
@@ -14,13 +14,13 @@
 	}
 	.column {
 		border: solid green 1px;
-	}
+	}*/
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="column one-third offset-one-third">Weather Application</div>
+			<div id="header" class="column one-third offset-one-third">Weather Application</div>
 		</div>
 		<div class="row">
 			<div class="column one-third offset-one-third">San Antonio</div>
@@ -28,65 +28,65 @@
 		<div class="row">
 			<div class="column one-third">
 				<div class="row">
-					<div class="temp column five-sixth offset-one-twelth">Weather Max</div>
+					<div class="output temp column five-sixth offset-one-twelth">Weather Max</div>
 					
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth"><img class="icon"  src="" alt="weather_conditions"></div>
+					<div class="output column five-sixth offset-one-twelth"><img class="icon"  src="" alt="weather_conditions"></div>
 				</div>
 				<div class="row">
-					<div class="conditions column five-sixth offset-one-twelth">Conditions</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Conditions: <span class="conditions"></span></div>
 				</div>
 				<div class="row">
-					<div class="humidity column five-sixth offset-one-twelth">Humidity</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Humidity: <span class="humidity"></span></div>
 				</div>
 				<div class="row">
-					<div class="wind column five-sixth offset-one-twelth">Wind</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Wind: <span class="wind"></span></div>
 				</div>
 				<div class="row">
-					<div class="pressure column five-sixth offset-one-twelth">Pressure</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Pressure: <span class="pressure"></span></div>
 				</div>
 			</div>
 			<div class="column one-third">
 				<div class="row">
-					<div class="temp column five-sixth offset-one-twelth">Weather Max</div>
+					<div class="output temp column five-sixth offset-one-twelth">Weather Max</div>
 					
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth"><img class="icon" src="" alt="weather_conditions"></div>
+					<div class="output column five-sixth offset-one-twelth"><img class="icon" src="" alt="weather_conditions"></div>
 				</div>
 				<div class="row">
-					<div class="conditions column five-sixth offset-one-twelth">Conditions</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Conditions: <span class="conditions"></span></div>
 				</div>
 				<div class="row">
-					<div class="humidity column five-sixth offset-one-twelth">Humidity</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Humidity: <span class="humidity"></span></div>
 				</div>
 				<div class="row">
-					<div class="wind column five-sixth offset-one-twelth">Wind</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Wind: <span class="wind"></span></div>
 				</div>
 				<div class="row">
-					<div class="pressure column five-sixth offset-one-twelth">Pressure</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Pressure: <span class="pressure"></span></div>
 				</div>
 				</div>
 			<div class="column one-third">
 				<div class="row">
-					<div class="temp column five-sixth offset-one-twelth">Weather Max</div>
+					<div class="output temp column five-sixth offset-one-twelth">Weather Max</div>
 					
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth"><img class="icon" src="" alt="weather_conditions"></div>
+					<div class="output column five-sixth offset-one-twelth"><img class="icon" src="" alt="weather_conditions"></div>
 				</div>
 				<div class="row">
-					<div class="conditions column five-sixth offset-one-twelth">Conditions</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Conditions: <span class="conditions"></span></div>
 				</div>
 				<div class="row">
-					<div class="humidity column five-sixth offset-one-twelth">Humidity</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Humidity: <span class="humidity"></span></div>
 				</div>
 				<div class="row">
-					<div class="wind column five-sixth offset-one-twelth">Wind</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Wind: <span class="wind"></span></div>
 				</div>
 				<div class="row">
-					<div class="pressure column five-sixth offset-one-twelth">Pressure</div>
+					<div class="output descriptor column five-sixth offset-one-twelth">Pressure: <span class="pressure"></span></div>
 				</div>
 			</div>
 			</div>

@@ -11,6 +11,8 @@ html {
     width: 80%;
     max-width: 1200px;
     text-align: center;
+    background-color: #abdcfd;
+    margin-top: 20px;
 }
 
 /*.row {
@@ -119,6 +121,23 @@ html {
 
 .offset-eleven-twelth {
     margin-left: 91.66%;
+}
+
+.descriptor {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.conditions, .humidity, .wind, .pressure {
+    font-weight: normal;
+}
+
+#header {
+    font-weight: bold;
+}
+
+.output {
+    background-color: #fff;
 }
 
 
