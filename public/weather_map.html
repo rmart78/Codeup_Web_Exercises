@@ -28,6 +28,9 @@
 		<div class="row">
 			<div class="column one-third">
 				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Today</div>
+				</div>
+				<div class="row">
 					<div class="output temp column five-sixth offset-one-twelth">Weather Max</div>
 					
 				</div>
@@ -49,6 +52,9 @@
 			</div>
 			<div class="column one-third">
 				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Tomorrow</div>
+				</div>
+				<div class="row">
 					<div class="output temp column five-sixth offset-one-twelth">Weather Max</div>
 					
 				</div>
@@ -69,6 +75,9 @@
 				</div>
 				</div>
 			<div class="column one-third">
+				<div class="row">
+					<div id="date" class="column five-sixth offset-one-twelth"></div>
+				</div>
 				<div class="row">
 					<div class="output temp column five-sixth offset-one-twelth">Weather Max</div>
 					
@@ -97,6 +106,8 @@
 
 	<script type="text/javascript">
 
+		
+
 		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
     		APPID: "6804c20447d064d378b94754a006da13",
     		lat:    29.423017,
@@ -107,12 +118,27 @@
     		
     		console.log(data);
     		console.log(data.list[0].deg);
+
+    		var d = new Date();
+			var weekday = new Array(7);
+			weekday[0]=  "Sunday";
+			weekday[1] = "Monday";
+			weekday[2] = "Tuesday";
+			weekday[3] = "Wednesday";
+			weekday[4] = "Thursday";
+			weekday[5] = "Friday";
+			weekday[6] = "Saturday";
+
+			var n = weekday[(d.getDay())+2];
+
+			var counter1 = 0;
 	     	var counter2 = 0;
 	     	var counter3 = 0;
 	     	var counter4 = 0;
 	     	var counter5 = 0;
 	     	var counter6 = 0;
 	     	var counter7 = 0;
+     		$('#date').html(n);
         	$('.temp').each(function() {
     			$(this).html(data.list[counter2].temp.max + '°' + '/' + ' ' + data.list[counter2].temp.min + '°');
         		counter2 ++;
