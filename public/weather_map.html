@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Map</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/weather_map.css">
+
+	<style type="text/css">
+	.container {
+		border: solid black 1px;
+	}
+	.row {
+		border: solid blue 1px;
+	}
+	.column {
+		border: solid green 1px;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="column one-third offset-one-third">Weather Application</div>
+		</div>
+		<div class="row">
+			<div class="column one-third offset-one-third">San Antonio</div>
+		</div>
+		<div class="row">
+			<div class="column one-third">
+				<div class="row">
+					<div class="column five-twelth">Weather Max</div>
+					<div class="column one-sixth">/</div>
+					<div class="column five-twelth">Weather Min</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Icon</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Conditions</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Humidity</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Wind</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Pressure</div>
+				</div>
+			</div>
+			<div class="column one-third">
+				<div class="row">
+					<div class="column five-twelth">Weather Max</div>
+					<div class="column one-sixth">/</div>
+					<div class="column five-twelth">Weather Min</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Icon</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Conditions</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Humidity</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Wind</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Pressure</div>
+				</div>
+				</div>
+			<div class="column one-third">
+				<div class="row">
+					<div class="column five-twelth">Weather Max</div>
+					<div class="column one-sixth">/</div>
+					<div class="column five-twelth">Weather Min</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Icon</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Conditions</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Humidity</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Wind</div>
+				</div>
+				<div class="row">
+					<div class="column five-sixth offset-one-twelth">Pressure</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		$.get("http://api.openweathermap.org/data/2.5/weather", {
+    		APPID: "6804c20447d064d378b94754a006da13",
+    		q:     "San Antonio, TX",
+    		units: "imperial"
+		}).done(function(data) {
+			console.log(data);
+		});
+
+	</script>
+
+</body>
+</html>
