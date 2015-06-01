@@ -28,68 +28,68 @@
 		<div class="row">
 			<div class="column one-third">
 				<div class="row">
-					<div class="column five-twelth">Weather Max</div>
+					<div id="weatherMax1" class="weatherMax column five-twelth">Weather Max</div>
 					<div class="column one-sixth">/</div>
-					<div class="column five-twelth">Weather Min</div>
+					<div id="weatherMin1" class="weatherMin column five-twelth">Weather Min</div>
 				</div>
 				<div class="row">
 					<div class="column five-sixth offset-one-twelth">Icon</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Conditions</div>
+					<div class="conditions column five-sixth offset-one-twelth">Conditions</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Humidity</div>
+					<div class="humidity column five-sixth offset-one-twelth">Humidity</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Wind</div>
+					<div class="wind column five-sixth offset-one-twelth">Wind</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Pressure</div>
+					<div class="pressure column five-sixth offset-one-twelth">Pressure</div>
 				</div>
 			</div>
 			<div class="column one-third">
 				<div class="row">
-					<div class="column five-twelth">Weather Max</div>
+					<div id="weatherMax2" class="weatherMax column five-twelth">Weather Max</div>
 					<div class="column one-sixth">/</div>
-					<div class="column five-twelth">Weather Min</div>
+					<div id="weatherMin2" class="weatherMin column five-twelth">Weather Min</div>
 				</div>
 				<div class="row">
 					<div class="column five-sixth offset-one-twelth">Icon</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Conditions</div>
+					<div class="conditions column five-sixth offset-one-twelth">Conditions</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Humidity</div>
+					<div class="humidity column five-sixth offset-one-twelth">Humidity</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Wind</div>
+					<div class="wind column five-sixth offset-one-twelth">Wind</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Pressure</div>
+					<div class="pressure column five-sixth offset-one-twelth">Pressure</div>
 				</div>
 				</div>
 			<div class="column one-third">
 				<div class="row">
-					<div class="column five-twelth">Weather Max</div>
+					<div id="weatherMax3" class="weatherMax column five-twelth">Weather Max</div>
 					<div class="column one-sixth">/</div>
-					<div class="column five-twelth">Weather Min</div>
+					<div id="weatherMin3" class="weatherMin column five-twelth">Weather Min</div>
 				</div>
 				<div class="row">
 					<div class="column five-sixth offset-one-twelth">Icon</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Conditions</div>
+					<div class="conditions column five-sixth offset-one-twelth">Conditions</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Humidity</div>
+					<div class="humidity column five-sixth offset-one-twelth">Humidity</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Wind</div>
+					<div class="wind column five-sixth offset-one-twelth">Wind</div>
 				</div>
 				<div class="row">
-					<div class="column five-sixth offset-one-twelth">Pressure</div>
+					<div class="pressure column five-sixth offset-one-twelth">Pressure</div>
 				</div>
 			</div>
 			</div>
@@ -100,12 +100,49 @@
 
 	<script type="text/javascript">
 
-		$.get("http://api.openweathermap.org/data/2.5/weather", {
+		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
     		APPID: "6804c20447d064d378b94754a006da13",
-    		q:     "San Antonio, TX",
+    		lat:    29.423017,
+    		lon:   -98.48527,
+    		cnt: 3,
     		units: "imperial"
 		}).done(function(data) {
-			console.log(data);
+    		
+    		console.log(data);
+    		console.log(data.list[0].deg);
+	     	var counter1 = 0;
+	     	var counter2 = 0;
+	     	var counter3 = 0;
+	     	var counter4 = 0;
+	     	var counter5 = 0;
+	     	var counter6 = 0;
+	     	$('.weatherMin').each(function() {
+        		$(this).html(data.list[counter1].temp.min);
+        		counter1 ++;
+        	});
+        	$('.weatherMax').each(function() {
+        		$(this).html(data.list[counter2].temp.max);
+        		counter2 ++;
+        	});
+        	$('.conditions').each(function() {
+        		$(this).html(data.list[counter3].weather[0].description);
+        		counter3 ++;
+        	});
+        	$('.humidity').each(function() {
+        		$(this).html(data.list[counter4].humidity);
+        		counter4 ++;
+        	});
+        	$('.wind').each(function() {
+        		$(this).html(data.list[counter5].speed);
+        		counter5 ++;
+        	});
+        	$('.pressure').each(function() {
+        		$(this).html(data.list[counter6].pressure);
+        		counter6 ++;
+        	});
+        	
+    
+
 		});
 
 	</script>
