@@ -9,6 +9,7 @@ html {
 .container {
     margin: 0 auto;
     width: 80%;
+    height: 380px;
     max-width: 1200px;
     text-align: center;
     background-color: #abdcfd;
@@ -144,6 +145,13 @@ html {
     text-align: center;
     margin-top: 10px;
 }
+
+#map-canvas {
+    width: 80%;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 
 

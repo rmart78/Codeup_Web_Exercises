@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<title>Weather Map</title>
 	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/css/weather_map.css">
 
-	<style type="text/css">
-/*	.container {
-		border: solid black 1px;
-	}
-	.row {
-		border: solid blue 1px;
-	}
-	.column {
-		border: solid green 1px;
-	}*/
-	</style>
 </head>
-<body onload="weatherLoad()">
+<body>
 	<div class="container">
 		<div class="row">
 			<div id="header" class="column one-third offset-one-third">Weather Application</div>
@@ -101,14 +91,11 @@
 			</div>
 		</div>
 	</div>
-	<div id="form_container">
-	<form id="form">
-		Latitude:<input id="latitude" type="text" name="latitude">
-		Longitude:<input id="longitude" type="text" name="longitude">
-	</form>
-	<button id="get_weather">Get Weather</button>
-	</div>
+	<div id="map-canvas"></div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1j_--S8woYzCdkoUMEFiEf1aub-SzeXY"></script>
+
 
 	<script type="text/javascript">
 
@@ -116,7 +103,9 @@
 
 		var lon2 = -98.48527;
 
-		function weatherLoad() {
+		$(document).ready(function weatherLoad() {
+
+		// function weatherLoad() {
 
 		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
     		APPID: "6804c20447d064d378b94754a006da13",
@@ -175,17 +164,36 @@
         	});
 		});
 
-		}
+	   	var mapOptions = {
+      	// Set the zoom level
+      	
+      	zoom: 5,
+      
+      	// This sets the center of the map at our location
+      	center: { lat: lat2, lng: lon2 }
+    	};
+    	
+    	// Render the map
+    	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-		 $('#get_weather').click(function(){
-		 		lat2 = $('#latitude').val();
-		 		lon2 = $('#longitude').val();
-                weatherLoad();
-                console.log($('#latitude').val());
-                console.log($('#longitude').val());
-                console.log(lat2);
-                console.log(lon2);
-                console.log('hey you');
+	  	var markerPosition = { lat: lat2, lng: lon2 };
+
+    	// Add the marker to our existing map
+    	var marker = new google.maps.Marker({
+      	position: markerPosition,
+      	map: map,
+      	draggable: true,
+      	title: 'drag me!'
+
+      	});
+
+    	// this listener grabs the new lat/lon and recalls the weatherLoad function
+      	 google.maps.event.addListener(marker, 'dragend', function (event) {
+    			lat2 = this.getPosition().lat();
+    			lon2 = this.getPosition().lng();
+    			weatherLoad();
+		}); 
+
     	});
 
 	</script>
