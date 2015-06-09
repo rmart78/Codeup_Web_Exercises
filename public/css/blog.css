@@ -173,3 +173,7 @@ h2 {
 	border-width: thick;
 	font-family: 'Raleway', sans-serif;
 }
+
+#cloud {
+	margin-left: -11px;
+}
