@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>raulmartinez home</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/raulmartinez.css">
+</head>
+<body>
+	<div class="container1">
+		<div id="row1" class="row">
+			<div class="column one-sixth"></div>
+			<div class="column one-sixth">Profile</div>
+			<div class="column one-sixth"></div>
+			<div class="column one-sixth">Skills</div>
+			<div class="column one-sixth"></div>
+		</div>
+	</div>
+		<div class="container2">
+		<div id="row2" class="row">
+			<div class="column one-sixth"></div>
+			<div class="column one-sixth">Education</div>
+			<div class="column one-sixth"></div>
+			<div class="column one-sixth">Contact</div>
+			<div class="column one-sixth"></div>
+		</div>
+	</div>
+	<div class="container3">
+		<div class="row">
+			<div id="myPhoto" class="column five-sixth offset-one-twelth"><img id="raul" src="/img/raul.jpg"></div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script src="/js/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+	$(document).ready(function(){
+
+	$(document).ready(loadIn);
+
+	function loadIn () {
+		$('#row1').effect('slide', 2000);
+		$('#row2').effect('slide', {direction: 'right'}, 2000, photoIn);
+	}
+
+	function photoIn () {
+		$('#raul').show('puff', 1000);
+	}
+
+	});
+
+	</script>
+
+</body>
+</html>
