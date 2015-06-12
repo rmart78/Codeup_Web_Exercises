@@ -1,0 +1,50 @@
+.uniqueClass1 {
+	background-color: #00c000;
+}
+
+.uniqueClass2 {
+	background-color: #ffcf00;
+}
+
+.uniqueClass3 {
+	background-color: #f56c00;
+}
+
+.uniqueClass4 {
+	background-color: #e40000;
+}
+
+.uniqueClass5 {
+	background-color: #7f0045;
+}
+
+.uniqueClass6 {
+	background-color: #007fba;
+}
+
+@media screen and (min-width:0px) {
+
+.background {
+	width: 80%;
+	margin-bottom: 1%;
+}
+
+}
+
+@media screen and (min-width:550px) {
+
+.background {
+	width: 30%;
+	margin-bottom: 3%;
+}
+
+}
+
+@media screen and (min-width:800px) {
+
+.background {
+	width: 25%;
+	margin-bottom: 5%;
+}
+
+}
