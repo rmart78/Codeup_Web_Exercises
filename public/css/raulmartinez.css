@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 *, *:before, *:after {
@@ -146,6 +147,8 @@ body {
 
 #row1, #row2 {
     background-color: #1919CF;
+    border: solid gray 1px;
+    color: white;
 }
 
 #myPhoto {
@@ -153,11 +156,18 @@ body {
 }
 
 #raul {
+    border-radius: 50%;
+    border: solid gray 1px;
     display: none;
     width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: -70px;
+}
+
+.column:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
 }
 
