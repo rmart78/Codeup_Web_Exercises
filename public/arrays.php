@@ -24,4 +24,18 @@
 
 	var_dump($multiDimensionalArray);
 
- ?>
+	$a = array(
+		'a' => 'A',
+		'b' => 'B',
+		'c' => 'C',
+		'd' => 'D'
+	);
+
+	echo $a['b'];
+
+	foreach ($a as $lowerCase => $upperCase) {
+		echo $lowerCase . PHP_EOL;
+		echo $upperCase . PHP_EOL;
+	}
+
+?>
