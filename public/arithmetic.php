@@ -1,23 +1,43 @@
 <?php
 
+$firstNumb = 200;
+$secondNumb = 100;
+
 function add($a, $b)
 {
-    echo $a + $b;
+    return $a + $b;
 }
+
+echo add($firstNumb,$secondNumb) . PHP_EOL;
 
 function subtract($a, $b)
 {
-    // Add code here
+    return $a - $b;
 }
+
+echo subtract($firstNumb,$secondNumb) . PHP_EOL;
 
 function multiply($a, $b)
 {
-    // Add code here
+    return $a * $b;
 }
+
+echo multiply($firstNumb,$secondNumb) . PHP_EOL;
 
 function divide($a, $b)
 {
-    // Add code here
+    return $a / $b;
 }
 
-// Add code to test your functions here
+echo divide($firstNumb,$secondNumb) . PHP_EOL;
+
+function modulus($a, $b)
+{
+    return $a % $b;
+}
+
+echo modulus($firstNumb,$secondNumb) . PHP_EOL;
+
+
+?>
+
