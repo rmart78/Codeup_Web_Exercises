@@ -1,0 +1,38 @@
+html {
+	box-sizing: border-box;
+	font-family: 'Playfair Display', serif;
+}
+
+*, *:before, *:after {
+  	box-sizing: inherit;
+}
+
+#navList {
+	position: fixed;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	background-color: grey;
+	opacity: .9;
+	color: white;
+	top: 0%;
+	left: 0%;
+	margin-top: 0%;
+}
+
+.navListItem {
+	display: inline-block;
+	margin-right: 5%;
+	margin-top: 1.5%;
+	margin-bottom: 0%;
+	font-size: 80%;
+}
+
+#introSection {
+	width: 102%;
+	margin-left: -1%;
+	height: 100vh;
+	text-align: center;
+	background-color: blue;
+}
+
