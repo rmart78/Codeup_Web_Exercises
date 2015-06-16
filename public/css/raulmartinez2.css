@@ -1,0 +1,25 @@
+body{
+    background: url("/img/image.jpg") no-repeat top center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#box1 {
+	margin-top: 45%;
+	background-color: red;
+	background-size: cover;
+	height: 50%;
+	width: 100%
+}
+
+#box2 {
+	margin-top: 50%;
+}
+
+
+
+
+
