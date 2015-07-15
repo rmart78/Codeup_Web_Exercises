@@ -1,0 +1,19 @@
+@import 'normalize';
+@import 'grid';
+
+.content-wrapper {
+	color: blue;
+}
+
+.some-class {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.another-class {
+  @extend .some-class;
+  border-width: 3px;
+}
+
+
+
+

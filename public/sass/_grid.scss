@@ -1,0 +1,122 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/*.row {
+    width:100%;
+}*/
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column > .row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.column.one-twelth {
+    width: 8.33%;
+}
+
+.column.one-sixth {
+    width: 16.66%;
+}
+
+.column.one-fourth {
+    width: 25%;
+}
+
+.column.one-third {
+    width: 33.33%;
+}
+
+.column.five-twelth {
+    width: 41.66%;
+}
+
+.column.one-half {
+    width: 50%;
+}
+
+.column.seven-twelth {
+    width: 58.33%;
+}
+
+.column.two-third {
+    width: 66.66%;
+}
+
+.column.three-fourth {
+    width: 75%;
+}
+
+.column.five-sixth {
+    width: 83.33%;
+}
+
+.column.eleven-twelth {
+    width: 91.66%;
+}
+
+.offset-one-twelth {
+    margin-left: 8.33%;
+}
+
+.offset-one-sixth {
+    margin-left: 16.66%;
+}
+
+.offset-one-fourth {
+    margin-left: 25%;
+}
+
+.offset-one-third {
+    margin-left: 33.33%;
+}
+
+.offset-five-twelth {
+    margin-left: 41.66%;
+}
+
+.offset-one-half {
+    margin-left: 50%;
+}
+
+.offset-seven-twelth {
+    margin-left: 58.33%;
+}
+
+.offset-two-third {
+    margin-left: 66.66%;
+}
+
+.offset-three-fourth {
+    margin-left: 75%;
+}
+
+.offset-five-sixth {
+    margin-left: 83.33%;
+}
+
+.offset-eleven-twelth {
+    margin-left: 91.66%;
+}
+

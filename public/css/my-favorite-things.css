@@ -1,0 +1,47 @@
+		tr:nth-child(odd) {
+    		background-color: grey;
+		}
+
+		table {
+			width: 50%;
+			margin-left: 25%;
+			text-align: center;
+		}
+
+ 		li {
+ 			list-style-type: none;
+ 			margin-right: 20%;
+ 		}
+
+		#container {
+ 			position: fixed;
+ 			width: 50%;
+ 			margin-top: 10%;
+ 			left: 25%;
+ 			text-align: center;
+ 			font-size: 100%;
+ 		}
+
+ 		html {
+ 			box-sizing: border-box;
+	 		font-family: 'Playfair Display', serif;
+
+ 		}
+
+ 		#header {
+ 			position: fixed;
+ 			width: 100%;
+ 			height: 10%;
+ 			top: 0%;
+ 			left: 0%;
+ 			background-color: #00002E;
+ 		}
+
+ 		#footer {
+ 			position: fixed;
+ 			width: 100%;
+ 			height: 10%;
+ 			bottom: 0%;
+ 			left: 0%;
+ 			background-color: #00002E;
+ 		}

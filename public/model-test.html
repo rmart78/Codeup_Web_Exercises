@@ -1,0 +1,76 @@
+<html ng-app="modelTest">
+<head>
+
+	<title>Model Test</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/model-test.css">
+
+</head>
+<body>
+
+    <div class="container1 container">
+	<form novalidate>
+        <div class="row">
+    	<div class="column one-half"><label for="first_name">First Name</label></div>
+    	<div class="column one-half"><input type="text" id="first_name" ng-model="user.firstName"></div>
+        </div>
+    	<label for="last_name">Last Name</label>
+    	<input type="text" id="last_name"  ng-model="user.lastName"><br>
+
+        <label for="company">Company Name</label>
+        <input type="text" id="company"  ng-model="user.company"><br>
+
+    	<label for="email">eMail</label>
+    	<input type="email" id="email" ng-model="user.email"><br>
+
+    	<label for="dob">Date of Birth</label>
+    	<input type="date" id="dob" date="yyyy-MM-dd" ng-model="user.dob"><br>
+
+    	<label for="github">Github URL</label>
+    	<input type="text" id="github" ng-model="user.github"><br>
+
+    	<label for="icon">Select an Icon Image:</label>
+		<select ng-model="user.image" id="icon" name="icon">
+            <option></option>
+    		<option value="/img/js.png">1</option>
+    		<option value="/img/jquery.png">2</option>
+    		<option value="/img/angular.png">3</option>
+		</select>
+	</form>
+
+        <div>1.<img ng-src="{{ 'img/js.png' }}" alt="JavaScript Logo" width="50"></div><br>
+        <div>2.<img ng-src="{{ 'img/jquery.png' }}" alt="JQuery Logo" width="50"></div><br>
+        <div>3.<img ng-src="{{ 'img/angular.png' }}" alt="Angular Logo" width="50"></div><br>
+        </div>
+
+
+
+    <div class="container">
+        <div id="imageOutput" class="row"><img id="image" ng-src="{{ user.image }}"></div>
+        <div class="row">
+            <div class="column five-twelth left">Name:</div>
+            <div class="column seven-twelth">{{ user.firstName }} {{ user.lastName }}</div>
+        </div>
+        <div class="row">
+            <div class="column five-twelth left">Company:</div>
+            <div class="column seven-twelth">{{ user.company }}</div>
+        </div>
+        <div class="row">
+            <div class="column five-twelth left">Email Address:</div>
+            <div class="column seven-twelth">{{ user.email }}</div>
+        </div>
+        <div class="row">
+            <div class="column five-twelth left">DOB:</div>
+            <div class="column seven-twelth">{{ user.dob | date }}</div>
+        </div>
+        <div class="row">
+            <div class="column five-twelth left">GitHub Page:</div>
+            <div class="column seven-twelth">{{ user.github }}</div>
+        </div>
+    </div>
+
+ 	<script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/modelTest.js"></script>
+
+</body>
+</html>

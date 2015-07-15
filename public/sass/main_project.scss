@@ -4,7 +4,7 @@
 .bar {
 	width: 100%;
 	position: fixed;
-	height: 10%;
+	height: 2em;
 	background-color: #2D4A50;
 }
 
@@ -163,36 +163,27 @@ body.has-active-menu {
   transform: translateX(0);
 }
 
-.c-buttons {
-	position: absolute;
-	height: 5%;
-	width: 100%;
-	top: 0px;
-}
-
 #c-button--slide-left {
 	float: left;
-	height: 150%;
-	width: 10%;
+	height: 100%;
+	width: 2.5em;
 	background-color: transparent;
 	border: none;
-}
-
-#menu_icon {
-	position: relative;
-	margin-top: -3px;
-	height: 180%;
-	width: 90%;
+	border-right: white solid 2px;
 }
 
 #c-button--slide-right {
 	float: right;
-	height: 150%;
-	width: 20%;
 	background-color: transparent;
 	border: none;
-	margin-top: .5%;
-	text-align: center;
+	height: 100%;
+	width: 8em;
 	color: white;
+	font-family: 'Pacifico', cursive;
+	font-size: 90%;
 }
 
+#menuIcon {
+	height: 100%;
+	width: 100%;
+}

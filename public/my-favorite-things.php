@@ -16,45 +16,19 @@ $favoriteThings = [
 
  	<link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
 
- 	<style type="text/css">
+ 	<link rel="stylesheet" type="text/css" href="/css/my-favorite-things.css">
 
- 		li:nth-child(odd) {
- 			background-color: #D1D1E0;
- 		}
-
- 		li {
- 			list-style-type: none;
- 			margin-right: 20%;
- 		}
-
- 		#container {
- 			width: 50%;
- 			margin-left: auto;
- 			margin-right: auto;
- 			text-align: center;
- 			margin-top: 10%;
- 		}
-
- 		ul {
- 			width: 100%;
- 		}
-
- 		html {
- 			box-sizing: border-box;
-	 		font-family: 'Playfair Display', serif;
-
- 		}
-
- 	</style>
  </head>
  <body>
+ 	<div id="header"></div>
  	<div id="container">
- 	<h1>Some of My Favorite Things Are:</h1>
- 	<ul>
- 		<?php foreach ($favoriteThings as $favoriteThing) { ?>
-        <li><?php echo $favoriteThing ?></li>
-    	<?php } ?>
- 	</ul>
+ 	<h1 id="title">Some of My Favorite Things Are:</h1>
+ 	<table id="favoriteList">
+ 		<?php foreach ($favoriteThings as $favoriteThing) : ?>
+        <tr><td><?= $favoriteThing; ?></td></tr>
+    	<?php endforeach ?>
+ 	</table>
  	</div>
+ 	<div id="footer"></div>
  </body>
  </html>

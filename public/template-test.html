@@ -1,0 +1,60 @@
+<html ng-app="templateTest">
+<head>
+	<title>Template Test</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		[ng-cloak] {
+			display: none;
+		}
+
+		li:first-child {
+    		font-style: italic;
+ 		}
+
+ 		li:last-child {
+     		font-weight: bold;
+ 		}
+
+	</style>
+</head>
+<body ng-cloak>
+
+	<ul>
+    	<li ng-repeat="num in [0,1,2,3,4,5,6,7,8,9]" ng-if="num % 3 != 0">{{ num }}</li>
+	</ul>
+
+	<ul>
+    	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter | uppercase}}{{ letter | lowercase}}</li>
+	</ul>
+
+	<div>
+    	Welcome {{ user.firstName }} {{ user.lastName }}<br>
+    	We will send a confirmation eMail to {{ user.email }}
+	</div>
+
+	<form novalidate>
+    	<label for="first_name">First Name</label>
+    	<input type="text" id="first_name" ng-model="user.firstName">
+
+    	<label for="email">eMail</label>
+    	<input type="email" id="email" ng-model="user.email">
+	</form>
+    
+    <img ng-repeat="image in [
+
+    ng-src="{{ 'img/js.png' }}" alt="JavaScript Logo",
+    ng-src="{{ 'img/jquery.png' }}" alt="JQuery Logo",
+    ng-src="{{ 'img/angular.png' }}" alt="AngularJS Logo"
+
+    ]">{{ image }}>
+<!-- 
+	<img ng-src="{{ 'img/js.png' }}" alt="JavaScript Logo">
+	<img ng-src="{{ 'img/jquery.png' }}" alt="JQuery Logo">
+	<img ng-src="{{ 'img/angular.png' }}" alt="AngularJS Logo"> -->
+
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/templateTest.js"></script>
+
+</body>
+</html>
