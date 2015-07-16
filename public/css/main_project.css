@@ -449,14 +449,18 @@ html {
 .offset-eleven-twelth {
   margin-left: 91.66%; }
 
+html {
+  font-family: 'Playball', cursive; }
+
 .bar {
   width: 100%;
   position: fixed;
   height: 2em;
-  background-color: #2D4A50; }
+  background-color: #358cc2; }
 
 #footer {
-  bottom: 0px; }
+  bottom: 0px;
+  border-top: solid silver 1px; }
 
 /**
  * Menu overview.
@@ -464,7 +468,7 @@ html {
 .c-menu {
   position: fixed;
   z-index: 200;
-  background-color: #67b5d1;
+  background-color: red;
   transition: transform 0.3s; }
 
 .c-menu__items {
@@ -477,7 +481,7 @@ html {
  */
 .c-menu__close {
   color: #fff;
-  background-color: #3184a1;
+  background-color: #358cc2;
   font-size: 14px;
   border: none;
   box-shadow: none;
@@ -485,7 +489,8 @@ html {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 2.28em; }
 
 /**
  * Close button resets.
@@ -530,9 +535,11 @@ body.has-active-menu {
   overflow-y: scroll; }
 
 @media all and (min-width: 320px) {
-  .c-menu--slide-left,
+  .c-menu--slide-left {
+    width: 120px; } }
+@media all and (min-width: 320px) {
   .c-menu--slide-right {
-    width: 300px; } }
+    width: 200px; } }
 .c-menu--slide-left .c-menu__item,
 .c-menu--slide-right .c-menu__item {
   display: block;
@@ -582,6 +589,9 @@ body.has-active-menu {
 .c-menu--slide-right.is-active {
   transform: translateX(0); }
 
+.c-buttons {
+  border-bottom: solid silver 1px; }
+
 #c-button--slide-left {
   float: left;
   height: 100%;
@@ -594,14 +604,29 @@ body.has-active-menu {
   float: right;
   background-color: transparent;
   border: none;
+  border-left: white solid 2px;
   height: 100%;
   width: 8em;
   color: white;
-  font-family: 'Pacifico', cursive;
-  font-size: 90%; }
+  font-size: 90%;
+  text-align: center; }
 
 #menuIcon {
   height: 100%;
   width: 100%; }
+
+#summerSpecial {
+  height: 5em;
+  width: 10em; }
+
+#logoContainer {
+  width: 16%;
+  float: left;
+  margin-left: 35%;
+  text-align: center; }
+
+#logo {
+  width: 100%;
+  margin-top: .1em; }
 
 /*# sourceMappingURL=main_project.css.map */
